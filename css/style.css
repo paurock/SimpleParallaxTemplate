@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body,
 html {
     height: 100%;
@@ -7,6 +12,52 @@ html {
     font-weight: 400;
     line-height: 1.8em;
     color: #666;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    /* CSS Smooth Scroll */
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 1.5rem 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgb(0, 0, 0, 0.7)
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
 }
 
 .pimg1,
@@ -17,11 +68,8 @@ html {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
-    /*
-      fixed = parallax
-      scroll = normal
-    */
+    scroll-snap-align: center;
+    height: 100vh;
     background-attachment: fixed;
 }
 
@@ -41,8 +89,15 @@ html {
 }
 
 .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 50px 80px;
+    height: 100vh;
+    text-align: center;
+    padding: 0 50px;
+    scroll-snap-align: center;
 }
 
 .section-light {
