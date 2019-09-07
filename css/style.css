@@ -257,6 +257,30 @@ h4 {
 
     .menu {
         visibility: hidden;
+        height: 100vh;
+        transform: translate(100vw, 0);
+        transition: all 0.5s ease-out;
+    }
+
+    .menu.show {
+        visibility: visible;
+        transform: translate(0, 0);
+        transition: all 0.5s ease-out;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu ul li {
+        margin: 0;
+        padding: 0.2rem;
+        font-size: 0.7rem;
+    }
+
+    .menu ul li a {
+        font-size: 27px;
+        line-height: 5rem;
     }
 
     .menu-btn {
@@ -290,29 +314,6 @@ h4 {
 
     .menu-btn.close .btn-line:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
-    }
-
-    .menu {
-        height: 100vh;
-    }
-
-    .menu.show {
-        visibility: visible;
-    }
-
-    .menu ul {
-        flex-direction: column;
-    }
-
-    .menu ul li {
-        margin: 0;
-        padding: 0.2rem;
-        font-size: 0.7rem;
-    }
-
-    .menu ul li a {
-        font-size: 27px;
-        line-height: 5rem;
     }
 
     .ptext {
