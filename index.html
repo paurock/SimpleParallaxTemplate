@@ -3,33 +3,40 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">            
     <title>Simple Parallax Sitelink</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="container">
-        <nav class="navbar">
-            <ul>
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#services">Services</a>
-                </li>
-                <li>
-                    <a href="#products">Products</a>
-                </li>
-                <li>
-                    <a href="#contacts">Contacts</a>
-                </li>
-            </ul>
-        </nav>
+        <header>
+                <div class="menu-btn">
+                        <div class="btn-line"></div>
+                        <div class="btn-line"></div>
+                        <div class="btn-line"></div>
+                </div>
+            <nav class="menu">             
+                <ul class="menu-nav">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="#products">Products</a>
+                    </li>
+                    <li>
+                        <a href="#contacts">Contacts</a>
+                    </li>
+                </ul>        
+            </nav>
+        </header>
         <div id="home" class="pimg1">
             <div class="ptext">
                 <span class="border">
@@ -163,18 +170,27 @@
                 officia debitis laudantium ut magni assumenda.
             </p>
         </section>
-        <div id="contacts" class="pimg1">
-            <div class="ptext">
-                <span class="border">
-                    GET IN TOUCH WITH US!
-                </span>
+        <div id="contacts" class="pimg1">                 
+            <div class="form-container">
+                <h2>GET IN TOUCH WITH US!</h2>
+                
+                <div class="form-style-5">
+                        <form>
+                        <fieldset>                        
+                        <input type="text" name="field1" placeholder="Your Name *">
+                        <input type="email" name="field2" placeholder="Your Email *">
+                        <textarea name="field3" placeholder="About yourself"></textarea>                       
+                        </fieldset>                        
+                        <input type="submit" value="Submit" />
+                        </form>
+                        </div>          
             </div>
         </div>
     </div>
 
     <!--  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script> -->
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>-->
+    <script src="js/main.js"></script> 
 </body>
 
 </html>

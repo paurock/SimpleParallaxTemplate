@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -11,17 +12,17 @@ html {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     line-height: 1.8em;
-    color: #666;
-    overflow: hidden;
+    color: #677;
+
 }
 
 .container {
     width: 100%;
     height: 100%;
-    /* CSS Smooth Scroll */
+    /* Scroll Snap */
     overflow-y: scroll;
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y;
 }
 
 h1,
@@ -31,17 +32,17 @@ h4 {
     margin: 1.5rem 0;
 }
 
-.navbar {
+.menu {
     position: fixed;
     top: 0;
     z-index: 1;
     display: flex;
     width: 100%;
     height: 60px;
-    background: rgb(0, 0, 0, 0.7)
+    background: rgb(0, 0, 0, 0.7);
 }
 
-.navbar ul {
+.menu ul {
     display: flex;
     list-style: none;
     width: 100%;
@@ -49,12 +50,12 @@ h4 {
     align-items: center;
 }
 
-.navbar ul li {
+.menu ul li {
     margin: 0 1rem;
     padding: 1rem;
 }
 
-.navbar ul li a {
+.menu ul li a {
     text-decoration: none;
     text-transform: uppercase;
     color: #f4f4f4;
@@ -94,10 +95,8 @@ h4 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100vh;
-    text-align: center;
     padding: 0 50px;
-    scroll-snap-align: center;
+    min-height: 100vh;
 }
 
 .section-light {
@@ -131,11 +130,210 @@ h4 {
     background-color: transparent;
 }
 
+/* Form styles*/
+.form-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100vh;
+    padding-top: 10%;
+    padding-left: 10%;
+}
+
+.form-container h2 {
+    color: white;
+    display: table;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .2rem;
+    background: gray;
+}
+
+.form-style-5 {
+    max-width: 500px;
+    padding: 10px 20px;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-style-5 fieldset {
+    border: none;
+}
+
+.form-style-5 legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.form-style-5 label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-style-5 input[type="text"],
+.form-style-5 input[type="date"],
+.form-style-5 input[type="datetime"],
+.form-style-5 input[type="email"],
+.form-style-5 input[type="number"],
+.form-style-5 input[type="search"],
+.form-style-5 input[type="time"],
+.form-style-5 input[type="url"],
+.form-style-5 textarea,
+.form-style-5 select {
+    background: rgba(255, 255, 255, .1);
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #e8eeef;
+    color: black;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 30px;
+}
+
+.form-style-5 input[type="text"]:focus,
+.form-style-5 input[type="date"]:focus,
+.form-style-5 input[type="datetime"]:focus,
+.form-style-5 input[type="email"]:focus,
+.form-style-5 input[type="number"]:focus,
+.form-style-5 input[type="search"]:focus,
+.form-style-5 input[type="time"]:focus,
+.form-style-5 input[type="url"]:focus,
+.form-style-5 textarea:focus,
+.form-style-5 select:focus {
+    background: #d2d9dd;
+}
+
+.form-style-5 select {
+    -webkit-appearance: menulist-button;
+    height: 35px;
+}
+
+.form-style-5 .number {
+    background: black;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+
+.form-style-5 input[type="submit"],
+.form-style-5 input[type="button"] {
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: black;
+    margin: 0 auto;
+    background: yellow;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid white;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+
+.form-style-5 input[type="submit"]:hover,
+.form-style-5 input[type="button"]:hover {
+    background: lightgray;
+}
+
 @media(max-width:568px) {
+
+    .menu {
+        visibility: hidden;
+    }
+
+    .menu-btn {
+        position: absolute;
+        z-index: 3;
+        right: 25px;
+        top: 25px;
+        cursor: pointer;
+    }
+
+    .menu-btn .btn-line {
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: white;
+    }
+
+    .menu-btn.close {
+        transform: rotate(180deg);
+        transition: all 0.5s ease-out;
+    }
+
+    .menu-btn.close .btn-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+
+    .menu-btn.close .btn-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-btn.close .btn-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .menu {
+        height: 100vh;
+    }
+
+    .menu.show {
+        visibility: visible;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu ul li {
+        margin: 0;
+        padding: 0.2rem;
+        font-size: 0.7rem;
+    }
+
+    .menu ul li a {
+        font-size: 27px;
+        line-height: 5rem;
+    }
+
+    .ptext {
+        font-size: 17px;
+        line-height: 17px;
+        letter-spacing: 0;
+    }
 
     .pimg1,
     .pimg2,
     .pimg3 {
         background-attachment: scroll;
+    }
+
+    .form-container {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .section {
+        padding: 1rem;
+        line-height: 1.5rem;
     }
 }
